@@ -8,7 +8,7 @@
 
 @include('layout.errors')
 
-<form method="POST" action="/">
+<form method="POST" action="{{route('post.store')}}">
   @csrf
   <div class="form-group">
     <label for="slug">Уникальное имя</label>

@@ -28,7 +28,7 @@ class PostController extends Controller
             'published' => 'boolean',
         ]);
         Post::create($validatedData);
-        return redirect('/');
+        return redirect()->route('post.index');
     }
 
     public function show(Post $post)
@@ -36,7 +36,7 @@ class PostController extends Controller
         if ($post->published) {
             return view('posts/show', compact('post'));
         } else {
-            return redirect('/');
+            return redirect()->route('post.index');
         }
     }
 }

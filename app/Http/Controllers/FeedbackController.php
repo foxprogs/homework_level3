@@ -26,6 +26,6 @@ class FeedbackController extends Controller
             'message' => 'required',
         ]);
         Feedback::create($validatedData);
-        return redirect('/');
+        return redirect()->route('post.index');
     }
 }

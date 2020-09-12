@@ -9,16 +9,16 @@
 
 @include('layout.errors')
 
-<form method="POST" action="/contacts">
+<form method="POST" action="{{route('feedback.store')}}">
   @csrf
   <div class="form-group">
     <label for="email">Ваш email</label>
-    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+    <input type="email" class="form-control" name="email" id="email" value="{{old('email')}}" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted">Обещаем не спамить.</small>
   </div>
   <div class="form-group">
     <label for="message">Сообщение</label>
-    <textarea class="form-control" name="message" id="message" rows="3" required=""></textarea>
+    <textarea class="form-control" name="message" id="message" rows="3" required="">{{old('message')}}</textarea>
   </div>
   <button type="submit" class="btn btn-primary">Отправить</button>
 </form>
