@@ -11,6 +11,4 @@ Route::get('admin/feedbacks', 'FeedbackController@index');
 Route::get('contacts', 'FeedbackController@create');
 Route::post('contacts', 'FeedbackController@store');
 
-Route::get('about', function () {
-    return view('about');
-});
+Route::get('about', 'StaticPageController@about');
