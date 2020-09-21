@@ -10,7 +10,7 @@
 
 @foreach($posts as $post)
 <div class="blog-post">
-    <a href="/posts/{{$post->slug}}"><h3 class="blog-post-title">{{$post->title}}</h3></a>
+    <a href="{{route('post.show', [$post])}}"><h3 class="blog-post-title">{{$post->title}}</h3></a>
     <p class="blog-post-meta">{{$post->created_at}}</p>
     <p>
     {!!$post->short_text!!}

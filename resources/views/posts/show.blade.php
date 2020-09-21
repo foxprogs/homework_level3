@@ -10,5 +10,5 @@
     <br>
     {!! $post->content !!}
 </div><!-- /.blog-post -->
-<a href="/">На главную</a>
+<a href="{{route('post.index')}}">На главную</a>
 @endsection
